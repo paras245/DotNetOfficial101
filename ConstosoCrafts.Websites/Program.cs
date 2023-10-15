@@ -1,4 +1,6 @@
+using ConstosoCrafts.Websites.Models;
 using ConstosoCrafts.Websites.Services;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +25,27 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+    //endpoints.MapGet("/products", async context =>
+    //{
+    //    // Resolve the service using the built-in DI container
+    //    var productService = context.RequestServices.GetRequiredService<JsonFileProductService>();
+
+    //    // Retrieve the products
+    //    var products = productService.GetProducts();
+
+    //    // Serialize the products to JSON
+    //    var json = JsonSerializer.Serialize(products);
+
+    //    // Set the content type to JSON
+    //    context.Response.ContentType = "application/json";
+
+    //    // Write the JSON to the response stream
+    //    await context.Response.WriteAsync(json);
+    //});
+});
+
 
 app.Run();
