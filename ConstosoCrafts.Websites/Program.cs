@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddControllers();
 builder.Services.AddTransient<JsonFileProductService>();
 
@@ -30,6 +31,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapRazorPages();
     endpoints.MapControllers();
+    endpoints.MapBlazorHub();
     //endpoints.MapGet("/products", async context =>
     //{
     //    // Resolve the service using the built-in DI container
