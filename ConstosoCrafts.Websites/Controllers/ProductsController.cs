@@ -9,18 +9,26 @@ namespace ConstosoCrafts.Websites.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+
+        //Access-Modifier Constructor 
         public ProductsController(JsonFileProductService productService)
         {
+            //Dependency Injection
             this.ProductService = productService;
         }
 
+        //Access-Modifier 
         public JsonFileProductService ProductService { get; }
 
+
+        //Http Verb : It is a get method
         [HttpGet]
+        //Access Modifier 
         public IEnumerable<Product> Get()
         {
             return ProductService.GetProducts();
         }
+
 
         //[HttpPatch]
         [Route("Rate")]
