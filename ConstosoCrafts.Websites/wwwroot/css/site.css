@@ -141,3 +141,23 @@ ul {
     background: -moz-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
     background: linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
 }
+
+
+
+
+/* BEGIN workaround bootstrap 5 dropped support for card-columns */
+/*.card-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card-columns > .card {
+  flex: 0 0 32%;
+  margin: 0 2% 20px 0;
+}
+
+.card-columns > .card:nth-child(3n) {
+  margin-right: 0;
+}*/
+/* END workaround bootstrap 5 dropped support for card-columns */
