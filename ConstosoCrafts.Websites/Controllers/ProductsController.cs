@@ -32,6 +32,7 @@ namespace ConstosoCrafts.Websites.Controllers
 
         //[HttpPatch]
         [Route("Rate")]
+        //Action Verb
         [HttpGet]
         public ActionResult Get([FromQuery] string ProductId,[FromQuery] int Rating)
         {
