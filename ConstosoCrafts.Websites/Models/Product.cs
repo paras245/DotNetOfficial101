@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace ConstosoCrafts.Websites.Models
 {
+    //Access-Modifier Class name
     public class Product
     {
         public string Id {  get; set; }
