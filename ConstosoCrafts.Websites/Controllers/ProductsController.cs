@@ -39,6 +39,8 @@ namespace ConstosoCrafts.Websites.Controllers
         public ActionResult Get([FromQuery] string ProductId,[FromQuery] int Rating)
         {
            ProductService.AddRating(ProductId, Rating);
+
+           //Return 200
            return Ok();
         }
     }
