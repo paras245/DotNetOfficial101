@@ -8,7 +8,7 @@ namespace ConstosoCrafts.Websites.Controllers
     [Route("[controller]")]
     [ApiController]
 
-    //Acces Modifier Controller Name 
+    //Acces Modifier Controller Name :Inherited Base Class
     public class ProductsController : ControllerBase
     {
 
