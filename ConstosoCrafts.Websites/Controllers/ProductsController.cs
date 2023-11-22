@@ -28,6 +28,7 @@ namespace ConstosoCrafts.Websites.Controllers
         //Access Modifier 
         public IEnumerable<Product> Get()
         {
+            //return type
             return ProductService.GetProducts();
         }
 
